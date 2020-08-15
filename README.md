@@ -1,7 +1,7 @@
 # twine-verify-upload
 
-Adds an "verify-upload" command to (PyPA's
-Twine)[https://github.com/pypa/twine/], that lets you check if the distribution
+Adds a "verify-upload" command to [PyPA's
+Twine](https://github.com/pypa/twine/), that lets you check if the distribution
 files have been uploaded already, and whether the hashes of the local files
 match those from the repository.
 
