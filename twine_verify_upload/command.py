@@ -13,7 +13,7 @@ from colorama import Fore, Style
 
 
 def print_header(api_endpoint: str) -> None:
-    print(f"Using API endpoint at f{api_endpoint}.\n")
+    print(f"Using API endpoint at {api_endpoint}.\n")
 
 
 # TODO: Refactor so that this displays package name instead
