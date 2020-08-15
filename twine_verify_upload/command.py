@@ -69,6 +69,7 @@ def hash_file(path: str, hashlib_cls: Callable):
     return hasher.hexdigest()
 
 
+# TODO: ensure PyPIClient raises on 404 errors
 def get_hashes(dist_path: str, simple_url: str) -> Tuple[str, Union[str, None]]:
     """Get local and remote hashes for a distribution
 
