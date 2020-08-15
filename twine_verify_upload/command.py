@@ -116,7 +116,9 @@ def get_hashes(dist_path: str, simple_url: str) -> Tuple[str, Union[str, None]]:
 
 def get_simple_url(repository_url: str) -> str:
     """Given repository uploads URL, return the URL of Simple API endpoint"""
-    return repository_url + '/simple'
+    if repository_url.endswith('://upload.pypi.org/legacy/'):
+        repository_url = 'https://pypi.org'
+    return repository_url.rstrip('/') + '/simple'
 
 
 # TODO: hash-compatible APIs should not be required for 'missing' / 'exists' opt
