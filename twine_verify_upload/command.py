@@ -1,4 +1,5 @@
 import os
+import sys
 import hashlib
 import argparse
 from typing import List, Tuple, Callable, Any, cast, Union
@@ -228,6 +229,10 @@ def main(args: List[str]) -> None:
     repository_url = normalize_repository_url(repository_url)
 
     condition = failure_conditions[parsed_args.fail_when]
+
+    if parsed_args.quiet:
+        sys.stdout = open(os.devnull, 'a')
+        sys.stderr = open(os.devnull, 'a')
 
     return exists(parsed_args.dists, repository_url, failure_checker=condition,
                   quiet=parsed_args.quiet)
