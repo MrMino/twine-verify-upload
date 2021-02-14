@@ -17,7 +17,9 @@ need to install Twine yourself.*
 ## Usage example
 
 ```
-> twine verify-upload dists/* --fail-when=different
+> twine verify_upload dists/* --fail-when=different
+Using API endpoint at https://pypi.org/simple.
+
 Looking for dist/my-package-4.8.3.dev0-py2.py3-none-any.whl.
         Local:  5b5e5bf19f75487d60ea872d678b408c                   
         Remote: <NOT FOUND>                                        
